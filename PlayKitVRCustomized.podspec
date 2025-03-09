@@ -3,9 +3,9 @@ suffix = ''       # Release
 
 Pod::Spec.new do |s|
   
-  s.name             = 'PlayKitVR'
+  s.name             = 'PlayKitVRCustomized'
   s.version          = '1.3.0' + suffix
-  s.summary          = 'PlayKitVR -- VR framework for iOS'
+  s.summary          = 'PlayKitVRCustomized -- VR framework for iOS fixing CVMetalTextureCacheCreateTextureFromImage issue'
   s.homepage         = 'https://github.com/kaltura/playkit-ios-vr'
   s.license          = { :type => 'AGPLv3', :file => 'LICENSE' }
   s.author           = { 'Kaltura' => 'community@kaltura.com' }
@@ -19,4 +19,4 @@ Pod::Spec.new do |s|
   
 end
 
-# To add playkit VR as dependecy use: s.dependency 'PlayKitVR', 'version_number'
+# To add playkit VR as dependecy use: s.dependency 'PlayKitVRCustomized', 'version_number'
