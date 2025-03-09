@@ -105,8 +105,22 @@ public final class PlayerItemRenderer {
         CVPixelBufferLockBaseAddress(pixelBuffer, .readOnly)
         defer { CVPixelBufferUnlockBaseAddress(pixelBuffer, .readOnly) }
 
+        let width = CVPixelBufferGetWidth(pixelBuffer)
+        let height = CVPixelBufferGetHeight(pixelBuffer)
+        let pixelFormat = MTLPixelFormat.bgra8Unorm // Assuming BGRA format
+
         var cacheOutput: CVMetalTexture?
-        let code = CVMetalTextureCacheCreateTextureFromImage(kCFAllocatorDefault, textureCache, pixelBuffer, nil, texture.pixelFormat, texture.width, texture.height, 0, &cacheOutput)
+        let code = CVMetalTextureCacheCreateTextureFromImage(
+            kCFAllocatorDefault,
+            textureCache,
+            pixelBuffer,
+            nil,
+            pixelFormat,
+            width,
+            height,
+            0,
+            &cacheOutput
+        )
 
         guard let cvMetalTexture = cacheOutput else {
             throw CVError(code: code)
