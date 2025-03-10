@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '15.0'
   s.source_files = 'Sources/**/*'
 
-  s.dependency 'PlayKitCustomized'
+  s.dependency 'PlayKitCustomized/Core'
   
 end
 
