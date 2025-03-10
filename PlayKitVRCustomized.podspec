@@ -4,7 +4,7 @@ suffix = ''       # Release
 Pod::Spec.new do |s|
   
   s.name             = 'PlayKitVRCustomized'
-  s.version          = '1.3.1' + suffix
+  s.version          = '1.3.2' + suffix
   s.summary          = 'PlayKitVRCustomized -- VR framework for iOS fixing CVMetalTextureCacheCreateTextureFromImage issue'
   s.homepage         = 'https://github.com/aldisa546/playkit-ios-vr'
   s.license          = { :type => 'AGPLv3', :file => 'LICENSE' }
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '15.0'
   s.source_files = 'Sources/**/*'
 
-  s.dependency 'PlayKit/Core'
+  s.dependency 'PlayKitCustomized/Core'
   
 end
 
